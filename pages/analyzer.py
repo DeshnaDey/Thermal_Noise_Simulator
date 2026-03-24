@@ -126,7 +126,7 @@ with col1:
     ax.set_facecolor("#111827")
 
     if show_clean:
-        ax.plot(t[:500], signal[:500], alpha=0.4, color="#94A3B8", label="Clean")
+        ax.plot(t[:500], signal[:500], alpha=0.4, color="#27F5E7", label="Clean")
 
     ax.plot(t[:500], noisy_signal[:500], linewidth=2, color="#3B82F6", label="Noisy")
     ax.legend()
