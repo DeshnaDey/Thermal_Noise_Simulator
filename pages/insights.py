@@ -29,7 +29,7 @@ Random thermal motion of electrons produces a fluctuating voltage across the res
 represented as a noise voltage source.
 """)
 
-st.image("images/image1.png", use_container_width=True)
+st.image("images/Image1.png", use_container_width=True)
 
 st.markdown("""
 In this model:
@@ -52,7 +52,7 @@ In the time domain, thermal noise appears as a completely random signal with no 
 It is often modeled as a Gaussian (normal) distribution with zero mean.
 """)
 
-st.image("images/image2.png", use_container_width=True)
+st.image("images/Image2.png", use_container_width=True)
 
 st.markdown("""
 The waveform fluctuates continuously and does not repeat. This randomness is what makes noise difficult 
