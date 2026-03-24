@@ -63,17 +63,17 @@ Thermal noise arises due to random electron motion and is present in all electro
 st.markdown("---")
 
 st.header("Physical Model")
-st.image("images/image1.png", use_container_width=True)
+st.image("images/Image1.png", use_container_width=True)
 
 st.markdown("---")
 
 st.header("Time Domain")
-st.image("images/image2.png", use_container_width=True)
+st.image("images/Image2.png", use_container_width=True)
 
 st.markdown("---")
 
 st.header("Frequency Domain")
-st.image("images/image3.png", use_container_width=True)
+st.image("images/image3.jpg", use_container_width=True)
 
 st.markdown("---")
 
