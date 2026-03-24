@@ -27,7 +27,7 @@ section[data-testid="stSidebar"] {
 }
 
 .stSlider > div > div > div > div {
-    background: linear-gradient(90deg, #FF5A1F, #FFB703);
+    background: linear-gradient(90deg, #FFB703, #FF5A1F);
 }
 
 </style>
