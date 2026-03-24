@@ -2,154 +2,85 @@ import streamlit as st
 
 st.set_page_config(layout="wide")
 
-# TITLE
+# 🔥 STYLE
+st.markdown("""
+<style>
+
+.stApp {
+    background:
+        radial-gradient(circle at 80% 20%, rgba(255,120,0,0.25), transparent 40%),
+        radial-gradient(circle at 60% 70%, rgba(255,0,80,0.20), transparent 45%),
+        radial-gradient(circle at 20% 30%, rgba(255,200,0,0.18), transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(255,80,0,0.15), transparent 50%),
+        linear-gradient(180deg, #05070D 0%, #0B0F1A 100%);
+}
+
+h1, h2, h3 {
+    color: #E5E7EB;
+}
+
+/* IMAGE PANEL */
+[data-testid="stImage"] {
+    border-radius: 20px;
+    padding: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 2px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 0 50px rgba(255,120,0,0.2),
+        inset 0 0 40px rgba(0,0,0,0.6);
+
+    transition: all 0.4s ease;
+}
+
+[data-testid="stImage"]:hover {
+    box-shadow:
+        0 0 80px rgba(255,120,0,0.4),
+        inset 0 0 40px rgba(0,0,0,0.7);
+}
+
+[data-testid="stImage"] img {
+    border-radius: 14px;
+    transition: transform 0.4s ease;
+}
+
+[data-testid="stImage"]:hover img {
+    transform: scale(1.04);
+}
+
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Thermal Noise: Theory and Analysis")
 
 st.markdown("---")
 
-# INTRO
 st.header("Overview")
-
 st.markdown("""
-Thermal noise, also known as Johnson–Nyquist noise, is a fundamental phenomenon in electronic systems. 
-It arises due to the random motion of charge carriers (electrons) inside conductors as a result of thermal energy.
-
-This type of noise is present in all resistive components and cannot be eliminated. It sets a fundamental limit 
-on the performance of electronic and communication systems.
+Thermal noise arises due to random electron motion and is present in all electronic systems.
 """)
 
 st.markdown("---")
 
-# PHYSICAL MODEL
-st.header("Physical Origin of Thermal Noise")
-
-st.markdown("""
-The origin of thermal noise can be understood by modeling a resistor as a noise-generating element. 
-Random thermal motion of electrons produces a fluctuating voltage across the resistor, which can be 
-represented as a noise voltage source.
-""")
-
-st.image("images/Image1.png", use_container_width=True)
-
-st.markdown("""
-In this model:
-
-- The resistor (R) generates thermal noise  
-- The noise is represented as a voltage source (V₍johnson₎)  
-- The capacitor (C) limits bandwidth  
-- The amplifier and voltmeter measure the noise  
-
-This demonstrates that thermal noise is an inherent physical property of electronic components.
-""")
+st.header("Physical Model")
+st.image("images/image1.png", use_container_width=True)
 
 st.markdown("---")
 
-# TIME DOMAIN
-st.header("Noise in the Time Domain")
-
-st.markdown("""
-In the time domain, thermal noise appears as a completely random signal with no predictable pattern. 
-It is often modeled as a Gaussian (normal) distribution with zero mean.
-""")
-
-st.image("images/Image2.png", use_container_width=True)
-
-st.markdown("""
-The waveform fluctuates continuously and does not repeat. This randomness is what makes noise difficult 
-to remove without affecting the original signal.
-""")
+st.header("Time Domain")
+st.image("images/image2.png", use_container_width=True)
 
 st.markdown("---")
 
-# FREQUENCY DOMAIN
-st.header("Noise in the Frequency Domain")
-
-st.markdown("""
-Thermal noise is classified as white noise, meaning that its power is distributed uniformly across 
-frequencies within a given bandwidth.
-""")
-
-st.image("images/image3.jpg", use_container_width=True)
-
-st.markdown("""
-The flat spectrum indicates that all frequencies contribute equally to the total noise power. 
-This is why increasing system bandwidth results in increased noise.
-""")
+st.header("Frequency Domain")
+st.image("images/image3.png", use_container_width=True)
 
 st.markdown("---")
 
-# FORMULA
-st.header("Mathematical Model")
-
-st.latex(r"P = k T B")
-
-st.markdown("""
-Where:
-
-- P is the noise power  
-- k is the Boltzmann constant  
-- T is the absolute temperature (Kelvin)  
-- B is the bandwidth  
-
-This relationship shows that noise power increases linearly with both temperature and bandwidth.
-""")
-
-st.markdown("---")
-
-# SNR
-st.header("Signal-to-Noise Ratio (SNR)")
-
-st.markdown("""
-Signal-to-noise ratio (SNR) is a key parameter used to evaluate system performance. 
-It measures the relative strength of a signal compared to background noise.
-""")
-
+st.header("Signal-to-Noise Ratio")
 st.image("images/image4.png", use_container_width=True)
 
-st.markdown("""
-As noise increases, the signal becomes less distinguishable. A low SNR results in poor system performance, 
-data loss, and potential system failure.
-
-The simulation developed in this project demonstrates how increasing temperature reduces SNR and degrades signal quality.
-""")
-
 st.markdown("---")
 
-# APPLICATIONS
-st.header("Practical Implications")
-
-st.markdown("""
-Thermal noise has significant implications in real-world systems:
-
-- Communication systems: Limits data transmission quality  
-- RF systems: Affects receiver sensitivity  
-- Sensors: Reduces measurement accuracy  
-- Audio systems: Produces background noise  
-
-In many applications, thermal noise defines the minimum detectable signal level.
-""")
-
-st.markdown("---")
-
-# CONCLUSION
-st.header("Conclusion")
-
-st.markdown("""
-Thermal noise is an unavoidable physical phenomenon that directly impacts system performance. 
-Understanding its behavior is essential for designing reliable electronic and communication systems.
-
-This project demonstrates both the theoretical and practical aspects of thermal noise, including its 
-effect on signal degradation and system reliability.
-""")
-
-st.markdown("---")
-
-# REFERENCES
-st.header("References")
-
-st.markdown("""
-1. Johnson, J. B. (1928). Thermal Agitation of Electricity in Conductors  
-2. Nyquist, H. (1928). Thermal Noise in Electrical Circuits  
-3. Electronics Notes – Thermal Noise  
-4. Standard communication systems textbooks  
-""")
+st.header("Mathematical Model")
+st.latex(r"P = kTB")
