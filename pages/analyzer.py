@@ -69,11 +69,9 @@ with col1:
     fig, ax = plt.subplots()
     fig.patch.set_facecolor("#05070D")
     ax.set_facecolor("#0B0F1A")
-
+    ax.plot(t[:500], noisy_signal[:500], color="#FF5A1F", linewidth=2)
     if show_clean:
         ax.plot(t[:500], signal[:500], color="#9CA3AF", alpha=0.4)
-
-    ax.plot(t[:500], noisy_signal[:500], color="#FF5A1F", linewidth=2)
     st.pyplot(fig)
 
 with col2:
